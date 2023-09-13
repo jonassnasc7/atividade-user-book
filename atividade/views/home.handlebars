@@ -1,0 +1,35 @@
+<h1>Usuários e Livros cadastrados</h1>
+<div class="box">
+    <div class="container">
+        {{#each users}}
+        <div class="item">
+            <h2>{{this.name}}</h2>
+            <p>{{this.occupation}}</p>
+            <div class="actions">
+                <a href="/users/{{this.id}}" class="details-btn">Ver detalhes</a>
+                <a href="/users/edit/{{this.id}}" class="edit-btn">Editar</a>
+                <form action="/users/delete/{{this.id}}" method="post">
+                    <input type="submit" value="Excluir" class="delete-btn">
+                </form>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    
+    <div class="container-2">
+        {{#each books}}
+        <div class="item">
+            <h2>{{this.author}}</h2>
+            <p>{{this.title}}</p>
+            <p>{{this.preco}}</p>
+            <div class="actions">
+                <a href="/books/{{this.id}}" class="details-btn">Ver detalhes</a>
+                <a href="/books/edit/{{this.id}}" class="edit-btn">Editar</a>
+                <form action="/books/delete/{{this.id}}" method="post">
+                    <input type="submit" value="Excluir" class="delete-btn">
+                </form>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

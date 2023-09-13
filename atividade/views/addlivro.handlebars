@@ -1,0 +1,23 @@
+<h1>Adicionar Livro</h1>
+
+<form action="/books/create" method="post" class="form">
+    <div class="form-control">
+        <label for="author"></label>
+        <input type="text" name="author" placeholder="Digite o nome do Autor">
+    </div>
+    <div class="form-control">
+        <label for="title"></label>
+        <input type="text" name="title" placeholder="Digite o nome do título">
+    </div>
+    <div class="form-control">
+        <label for="preco"></label>
+        <input type="text" name="preco" placeholder="R$ 59,90">
+    </div>
+    <div class="form-control form-checkbox">
+        <input type="checkbox" name="newsletter" checked>
+        <label for="newsletter">Capa dura</label>
+    </div>
+    <div class="form-control">
+        <input type="submit" value="Cadastrar">
+    </div>
+</form>

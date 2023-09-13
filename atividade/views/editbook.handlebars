@@ -1,0 +1,27 @@
+<h1>Editando: {{book.title}}</h1>
+
+<form action="/books/edit/{{book.id}}" method="post" class="form">
+    <div class="form-control">
+        <label for="author"></label>
+        <input type="text" name="author" value="{{book.author}}">
+    </div>
+    <div class="form-control">
+        <label for="title"></label>
+        <input type="text" name="title" value="{{book.title}}">
+    </div>
+    <div class="form-control">
+        <label for="preco"></label>
+        <input type="text" name="preco" value="{{book.preco}}">
+    </div>
+    <div class="form-control form-checkbox">
+        {{#if book.newsletter}}
+            <input type="checkbox" name="newsletter" checked>
+        {{else}}
+            <input type="checkbox" name="newsletter" checked>
+        {{/if}}
+        <label for="newsletter">Capa dura</label>
+    </div>
+    <div class="form-control">
+        <input type="submit" value="Cadastrar">
+    </div>
+</form>
